@@ -71,12 +71,30 @@
     .badge-upcoming { background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
 
     /* Photo Gallery */
-    .gallery-scroll-container { max-height: 440px; overflow-y: auto; border-radius: 8px; border: 1px solid var(--border); padding: 12px; display: flex; flex-direction: column; gap: 16px; scroll-snap-type: y mandatory; }
+    .gallery-scroll-container {
+      max-height: 600px; /* Increased from 440px/480px */
+      overflow-y: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      scroll-snap-type: y mandatory;
+      }    
     .gallery-scroll-container::-webkit-scrollbar { width: 8px; }
     .gallery-scroll-container::-webkit-scrollbar-track { background: var(--bg); }
     .gallery-scroll-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
     .gallery-item { scroll-snap-align: start; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
-    .gallery-item img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; display: block; }
+    .gallery-item img {
+      width: auto;
+      max-width: 100%;
+      max-height: 540px;
+      height: auto;
+      object-fit: contain; /* Shows full photo without cropping */
+      border-radius: 8px;
+      display: block;
+    }    
     .gallery-caption { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); margin-top: 6px; }
 
     /* Process & Requirements Grid */
@@ -200,7 +218,7 @@
             <td><span class="badge-done">Completed</span></td>
           </tr>
           <tr>
-            <td>Deworming #3</td>
+            <td>Deworming #3 | Feli-D</td>
             <td>2026-08-04</td>
             <td><span class="badge-done">Completed</span></td>
           </tr>
