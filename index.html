@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rescue Kitten Adoption</title>
+  
+  <title>Rescue Kitten Adoption | Miso, Peppa & Bubba</title>
+  <meta name="description" content="Meet Miso, Peppa, and Bubba. Healthy, vaccinated rescue kittens looking for loving, responsible forever homes.">
+
+  <!-- Social Media & Link Preview Metadata (Open Graph) -->
+  <meta property="og:title" content="Rescue Kittens Available for Adoption">
+  <meta property="og:description" content="Meet Miso, Peppa, and Bubba. Healthy, vaccinated rescue kittens looking for loving, responsible forever homes.">
+  <meta property="og:image" content="images/a_miso.jpg">
+  <meta property="og:type" content="website">
+
   <style>
     :root {
       --primary: #2b6cb0;
@@ -15,37 +24,69 @@
       --border: #e2e8f0;
       --accent: #ebf8ff;
       --accent-text: #2b6cb0;
+      --tag-med-bg: #ecfdf5;
+      --tag-med-text: #047857;
+      --ig-color: #d62976;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 24px 16px; }
     .container { max-width: 960px; margin: 0 auto; }
 
-    /* Header */
-    header { text-align: center; margin-bottom: 40px; padding: 20px 0; }
-    header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
-    header p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+    /* Header & Instagram Sublink */
+    header { text-align: center; margin-bottom: 36px; padding: 10px 0; }
+    header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; color: #1a202c; }
+    header p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 12px auto; }
+    .location-badge { display: inline-block; font-size: 0.9rem; font-weight: 600; color: #4a5568; background: #edf2f7; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; }
+    .ig-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 600; color: var(--ig-color); text-decoration: none; padding: 4px 12px; background: #fff; border: 1px solid #fed7e2; border-radius: 999px; transition: background 0.2s ease; }
+    .ig-link:hover { background: #fff5f7; }
 
-    /* Grid Layout */
-    .kitten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
+    /* Kitten Cards Grid Layout */
+    .kitten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px; }
     .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; }
-    .card img { width: 100%; height: 220px; object-fit: cover; background-color: #cbd5e0; }
+    .card img { width: 100%; height: 240px; aspect-ratio: 4 / 3; object-fit: cover; background-color: #cbd5e0; display: block; }
     .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-    .card-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; }
-    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+    .card-title { font-size: 1.3rem; font-weight: 600; color: #1a202c; }
+    .card-meta { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
     .tag { font-size: 0.75rem; font-weight: 600; background: var(--accent); color: var(--accent-text); padding: 4px 8px; border-radius: 999px; }
+    .tag.med { background: var(--tag-med-bg); color: var(--tag-med-text); }
     .card-text { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px; flex: 1; }
 
-    /* Info & Process */
-    .info-section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 40px; }
-    .info-section h2 { font-size: 1.4rem; margin-bottom: 16px; }
-    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
-    .step { background: var(--bg); padding: 16px; border-radius: 8px; border-left: 4px solid var(--primary); }
-    .step-num { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+    /* Key Specs inside Cards */
+    .specs-list { list-style: none; font-size: 0.88rem; border-top: 1px solid var(--border); padding-top: 12px; }
+    .specs-list li { margin-bottom: 4px; display: flex; justify-content: space-between; }
+    .specs-list span:first-child { color: var(--text-muted); }
+
+    /* Section General */
+    .section-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 32px; }
+    .section-box h2 { font-size: 1.35rem; margin-bottom: 8px; color: #1a202c; }
+
+    /* Medical History & Key Facts Table */
+    .med-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.92rem; }
+    .med-table th, .med-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    .med-table th { background: var(--bg); font-weight: 600; color: #4a5568; }
+    .badge-done { background: #dcfce7; color: #15803d; padding: 2px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
+    .badge-upcoming { background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
+
+    /* Photo Gallery */
+    .gallery-scroll-container { max-height: 440px; overflow-y: auto; border-radius: 8px; border: 1px solid var(--border); padding: 12px; display: flex; flex-direction: column; gap: 16px; scroll-snap-type: y mandatory; }
+    .gallery-scroll-container::-webkit-scrollbar { width: 8px; }
+    .gallery-scroll-container::-webkit-scrollbar-track { background: var(--bg); }
+    .gallery-scroll-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    .gallery-item { scroll-snap-align: start; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
+    .gallery-item img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; display: block; }
+    .gallery-caption { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); margin-top: 6px; }
+
+    /* Process & Requirements Grid */
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 16px; }
+    .step { background: var(--bg); padding: 14px; border-radius: 8px; border-left: 4px solid var(--primary); font-size: 0.9rem; }
+    .step-num { font-weight: 700; color: var(--primary); margin-bottom: 2px; }
 
     /* CTA Section */
     .cta-section { text-align: center; padding: 32px 20px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; }
-    .btn { display: inline-block; background-color: var(--primary); color: #fff; text-decoration: none; padding: 12px 28px; font-size: 1rem; font-weight: 600; border-radius: 8px; transition: background-color 0.2s ease; }
+    .btn { display: inline-block; background-color: var(--primary); color: #fff; text-decoration: none; padding: 12px 28px; font-size: 1rem; font-weight: 600; border-radius: 8px; transition: background 0.2s; }
     .btn:hover { background-color: var(--primary-hover); }
   </style>
 </head>
@@ -55,82 +96,178 @@
     <header>
       <h1>Rescue Kittens Looking for a Home</h1>
       <p>Meet our healthy, playful rescue kittens ready for loving, responsible forever homes.</p>
+      
+      <!-- Location Header Placeholder -->
+      <div>
+        <span class="location-badge">📍 Location: [Insert City / Area Name]</span>
+      </div>
+
+      <!-- Instagram Link Placeholder -->
+      <a href="https://instagram.com/YOUR_ORIGINAL_POST_LINK" class="ig-link" target="_blank" rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        View Original Instagram Story &amp; Video Updates
+      </a>
     </header>
 
     <!-- Kitten Cards -->
     <main class="kitten-grid">
-      <!-- Kitten 1 -->
+      <!-- Miso -->
       <article class="card">
-        <img src="images/a_miso.jpg" alt="Photo of Kitten 1">
+        <img src="images/a_miso.jpg" alt="Miso">
         <div class="card-body">
-          <h2 class="card-title">Kitten One</h2>
+          <div class="card-header">
+            <h2 class="card-title">Miso</h2>
+            <span class="card-meta">Born: [Insert Date / Age]</span>
+          </div>
           <div class="tags">
-            <span class="tag">Male / Female</span>
-            <span class="tag">Vaccinated</span>
+            <span class="tag">Male</span>
+            <span class="tag med">Dose 1 Vaccinated</span>
             <span class="tag">Playful</span>
           </div>
           <p class="card-text">Curious explorer who loves chasing feather toys and curling up on your lap after playtime.</p>
+          <ul class="specs-list">
+            <li><span>Litter Trained:</span> <span>Yes</span></li>
+            <li><span>Current Diet:</span> <span>[e.g., Royal Canin Kitten / Boiled Chicken]</span></li>
+          </ul>
         </div>
       </article>
 
-      <!-- Kitten 2 -->
+      <!-- Peppa -->
       <article class="card">
-        <img src="images/kitten2.jpg" alt="Photo of Kitten 2">
+        <img src="images/kitten2.jpg" alt="Peppa">
         <div class="card-body">
-          <h2 class="card-title">Kitten Two</h2>
+          <div class="card-header">
+            <h2 class="card-title">Peppa</h2>
+            <span class="card-meta">Born: [Insert Date / Age]</span>
+          </div>
           <div class="tags">
-            <span class="tag">Male / Female</span>
-            <span class="tag">Vaccinated</span>
-            <span class="tag">Cuddly</span>
+            <span class="tag">Male</span>
+            <span class="tag med">Dose 1 Vaccinated</span>
+            <span class="tag">Energetic</span>
           </div>
           <p class="card-text">Gentle, affectionate, and purrs instantly when held. Gets along well with other pets.</p>
+          <ul class="specs-list">
+            <li><span>Litter Trained:</span> <span>Yes</span></li>
+            <li><span>Current Diet:</span> <span>[e.g., Royal Canin Kitten / Boiled Chicken]</span></li>
+          </ul>
         </div>
       </article>
 
-      <!-- Kitten 3 -->
+      <!-- Bubba -->
       <article class="card">
-        <img src="images/kitten3.jpg" alt="Photo of Kitten 3">
+        <img src="images/kitten3.jpg" alt="Bubba">
         <div class="card-body">
-          <h2 class="card-title">Kitten Three</h2>
+          <div class="card-header">
+            <h2 class="card-title">Bubba</h2>
+            <span class="card-meta">Born: [Insert Date / Age]</span>
+          </div>
           <div class="tags">
-            <span class="tag">Male / Female</span>
-            <span class="tag">Vaccinated</span>
+            <span class="tag">Male</span>
+            <span class="tag med">Dose 1 Vaccinated</span>
             <span class="tag">Energetic</span>
           </div>
           <p class="card-text">Bold and vocal leader of the group. Loves interactive games and high climbing perches.</p>
+          <ul class="specs-list">
+            <li><span>Litter Trained:</span> <span>Yes</span></li>
+            <li><span>Current Diet:</span> <span>[e.g., Royal Canin Kitten / Boiled Chicken]</span></li>
+          </ul>
         </div>
       </article>
     </main>
 
-    <!-- Adoption Process -->
-    <section class="info-section">
-      <h2>Adoption Process & Criteria</h2>
-      <p>We prioritize safe, indoor-only environments with adopters committed to routine veterinary care.</p>
+    <!-- Medical History & Care Tracker -->
+    <section class="section-box">
+      <h2>Medical &amp; Vaccination Status</h2>
+      <p style="font-size: 0.95rem; color: var(--text-muted);">We are ensuring all kittens receive primary veterinary protocols before rehoming. Veterinary records will be transferred to adopters.</p>
       
-      <div class="process-steps">
-        <div class="step">
-          <div class="step-num">Step 1</div>
-          <strong>Submit Application</strong>
-          <p>Fill out our short adoption questionnaire to tell us about your home.</p>
+      <table class="med-table">
+        <thead>
+          <tr>
+            <th>Care Milestone</th>
+            <th>Administered / Target Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Deworming &amp; General Health Check</td>
+            <td>[Insert Date, e.g., July 2026]</td>
+            <td><span class="badge-done">Completed</span></td>
+          </tr>
+          <tr>
+            <td>Tricat / FPV Vaccination (Dose 1)</td>
+            <td>[Insert Date, e.g., August 2026]</td>
+            <td><span class="badge-done">Completed</span></td>
+          </tr>
+          <tr>
+            <td>Tricat Booster (Dose 2)</td>
+            <td>[Insert Target Date / 3–4 Weeks Post Dose 1]</td>
+            <td><span class="badge-upcoming">In Progress</span></td>
+          </tr>
+          <tr>
+            <td>Rabies &amp; Mandatory Spay/Neuter</td>
+            <td>At ~6 Months Age</td>
+            <td><span class="badge-upcoming">Adopter Responsibility</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="section-box">
+      <h2>Photo Gallery</h2>
+      <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px;">Scroll through more candid pictures and playtime moments.</p>
+
+      <div class="gallery-scroll-container">
+        <div class="gallery-item">
+          <img src="images/a_miso.jpg" alt="Miso exploring" loading="lazy">
+          <span class="gallery-caption">Miso exploring</span>
         </div>
-        <div class="step">
-          <div class="step-num">Step 2</div>
-          <strong>Quick Screening</strong>
-          <p>A brief conversation to confirm compatibility and answer questions.</p>
+        <div class="gallery-item">
+          <img src="images/kitten2.jpg" alt="Peppa relaxing" loading="lazy">
+          <span class="gallery-caption">Peppa relaxing</span>
         </div>
-        <div class="step">
-          <div class="step-num">Step 3</div>
-          <strong>Meet & Greet</strong>
-          <p>Schedule a visit to meet the kittens and finalize adoption details.</p>
+        <div class="gallery-item">
+          <img src="images/kitten3.jpg" alt="Bubba active and ready to play" loading="lazy">
+          <span class="gallery-caption">Bubba active &amp; ready to play</span>
         </div>
       </div>
     </section>
 
-    <!-- CTA / Form Embed -->
+    <!-- Adoption Process & Prerequisites -->
+    <section class="section-box">
+      <h2>Adoption Criteria &amp; Handover</h2>
+      <p style="font-size: 0.95rem; color: var(--text-muted);">Please review the adoption guidelines before applying:</p>
+      
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">Location &amp; Handover</div>
+          <strong>Local Pickup Only</strong>
+          <p>Adoption is open to [Insert City / Neighborhood]. Adopters must arrange pickup using a secure hard-sided pet carrier.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">Home Safety</div>
+          <strong>100% Indoor &amp; Cat-Proofed</strong>
+          <p>All accessible windows and balconies must have safety netting or mesh installed prior to handover.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">Pairing / Multi-Cat</div>
+          <strong>Pair Priority</strong>
+          <p>Priority is given to applicants adopting a pair together or households with an existing friendly, vaccinated resident cat.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">Adoption Fee / Costs</div>
+          <strong>[Free / Direct Vet Cost Reimbursement]</strong>
+          <p>[e.g., Free to vetted homes / Adopters cover remaining booster vaccines at their chosen vet clinic].</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
     <section class="cta-section">
-      <h2 style="margin-bottom: 8px;">Interested in Adopting?</h2>
-      <p style="color: var(--text-muted); margin-bottom: 20px;">Applications are reviewed on a rolling basis. Pairs given priority.</p>
-      <a href="https://forms.google.com" class="btn" target="_blank" rel="noopener noreferrer">Fill Out Adoption Form</a>
+      <h2>Interested in Adopting?</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">Applications are reviewed on a rolling basis. Please complete the form below to begin the screening process.</p>
+      <a href="https://forms.gle/3C8WDrYGatjhUG9R9" class="btn" target="_blank" rel="noopener noreferrer">Fill Out Adoption Form</a>
     </section>
   </div>
 
