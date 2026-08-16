@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescue Kitten Adoption</title>
+  <style>
+    :root {
+      --primary: #2b6cb0;
+      --primary-hover: #2c5282;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #2d3748;
+      --text-muted: #718096;
+      --border: #e2e8f0;
+      --accent: #ebf8ff;
+      --accent-text: #2b6cb0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 24px 16px; }
+    .container { max-width: 960px; margin: 0 auto; }
+
+    /* Header */
+    header { text-align: center; margin-bottom: 40px; padding: 20px 0; }
+    header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+    header p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+    /* Grid Layout */
+    .kitten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
+    .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; }
+    .card img { width: 100%; height: 220px; object-fit: cover; background-color: #cbd5e0; }
+    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .card-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 6px; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .tag { font-size: 0.75rem; font-weight: 600; background: var(--accent); color: var(--accent-text); padding: 4px 8px; border-radius: 999px; }
+    .card-text { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px; flex: 1; }
+
+    /* Info & Process */
+    .info-section { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 40px; }
+    .info-section h2 { font-size: 1.4rem; margin-bottom: 16px; }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
+    .step { background: var(--bg); padding: 16px; border-radius: 8px; border-left: 4px solid var(--primary); }
+    .step-num { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+
+    /* CTA Section */
+    .cta-section { text-align: center; padding: 32px 20px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; }
+    .btn { display: inline-block; background-color: var(--primary); color: #fff; text-decoration: none; padding: 12px 28px; font-size: 1rem; font-weight: 600; border-radius: 8px; transition: background-color 0.2s ease; }
+    .btn:hover { background-color: var(--primary-hover); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Rescue Kittens Looking for a Home</h1>
+      <p>Meet our healthy, playful rescue kittens ready for loving, responsible forever homes.</p>
+    </header>
+
+    <!-- Kitten Cards -->
+    <main class="kitten-grid">
+      <!-- Kitten 1 -->
+      <article class="card">
+        <img src="images/kitten1.jpg" alt="Photo of Kitten 1">
+        <div class="card-body">
+          <h2 class="card-title">Kitten One</h2>
+          <div class="tags">
+            <span class="tag">Male / Female</span>
+            <span class="tag">Vaccinated</span>
+            <span class="tag">Playful</span>
+          </div>
+          <p class="card-text">Curious explorer who loves chasing feather toys and curling up on your lap after playtime.</p>
+        </div>
+      </article>
+
+      <!-- Kitten 2 -->
+      <article class="card">
+        <img src="images/kitten2.jpg" alt="Photo of Kitten 2">
+        <div class="card-body">
+          <h2 class="card-title">Kitten Two</h2>
+          <div class="tags">
+            <span class="tag">Male / Female</span>
+            <span class="tag">Vaccinated</span>
+            <span class="tag">Cuddly</span>
+          </div>
+          <p class="card-text">Gentle, affectionate, and purrs instantly when held. Gets along well with other pets.</p>
+        </div>
+      </article>
+
+      <!-- Kitten 3 -->
+      <article class="card">
+        <img src="images/kitten3.jpg" alt="Photo of Kitten 3">
+        <div class="card-body">
+          <h2 class="card-title">Kitten Three</h2>
+          <div class="tags">
+            <span class="tag">Male / Female</span>
+            <span class="tag">Vaccinated</span>
+            <span class="tag">Energetic</span>
+          </div>
+          <p class="card-text">Bold and vocal leader of the group. Loves interactive games and high climbing perches.</p>
+        </div>
+      </article>
+    </main>
+
+    <!-- Adoption Process -->
+    <section class="info-section">
+      <h2>Adoption Process & Criteria</h2>
+      <p>We prioritize safe, indoor-only environments with adopters committed to routine veterinary care.</p>
+      
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">Step 1</div>
+          <strong>Submit Application</strong>
+          <p>Fill out our short adoption questionnaire to tell us about your home.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">Step 2</div>
+          <strong>Quick Screening</strong>
+          <p>A brief conversation to confirm compatibility and answer questions.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">Step 3</div>
+          <strong>Meet & Greet</strong>
+          <p>Schedule a visit to meet the kittens and finalize adoption details.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Form Embed -->
+    <section class="cta-section">
+      <h2 style="margin-bottom: 8px;">Interested in Adopting?</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">Applications are reviewed on a rolling basis. Pairs given priority.</p>
+      <a href="https://forms.google.com" class="btn" target="_blank" rel="noopener noreferrer">Fill Out Adoption Form</a>
+    </section>
+  </div>
+
+</body>
+</html>
