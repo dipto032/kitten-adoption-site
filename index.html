@@ -41,6 +41,28 @@
     .ig-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 600; color: var(--ig-color); text-decoration: none; padding: 4px 12px; background: #fff; border: 1px solid #fed7e2; border-radius: 999px; transition: background 0.2s ease; }
     .ig-link:hover { background: #fff5f7; }
 
+    .updated-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #64748b;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .updated-dot {
+      width: 6px;
+      height: 6px;
+      background-color: #10b981; /* Green pulse dot */
+      border-radius: 50%;
+      display: inline-block;
+    }
+
     /* Kitten Cards Grid Layout */
     .kitten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px; }
     .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; }
@@ -112,7 +134,11 @@
 
   <div class="container">
     <header>
-      <h1>Rescue Kittens Looking for a Home</h1>
+      <div class="updated-badge">
+        <span class="updated-dot"></span>
+        Last updated: August 18, 2026
+      </div>
+      <h1>Kittens Looking for a Home</h1>
       <p>Meet our healthy, playful rescue kittens ready for loving, responsible forever homes.</p>
       
       <!-- Location Header Placeholder -->
@@ -126,6 +152,7 @@
         View Original Instagram Post!
       </a> -->
     </header>
+    
 
     <!-- Kitten Cards -->
     <main class="kitten-grid">
@@ -143,10 +170,10 @@
             <span class="tag med">Dewormed</span>
             <span class="tag">Playful</span>
           </div>
-          <p class="card-text">Curious explorer who loves chasing feather toys and curling up on your lap after playtime.</p>
+          <p class="card-text">Lap and shoulder kitty, perfect co-working pawtner, playful yet demure.</p>
           <ul class="specs-list">
             <li><span>Litter Trained:</span> <span>Yes</span></li>
-            <li><span>Current Diet:</span> <span>[e.g., Royal Canin Kitten / Boiled Chicken]</span></li>
+            <li><span>Current Diet:</span> <span>Royal Canin Kitten Dry Food, Sheba Wet Food, Boiled boneless fish</span></li>
           </ul>
         </div>
       </article>
@@ -165,10 +192,10 @@
             <span class="tag med">Dewormed</span>
             <span class="tag">Energetic</span>
           </div>
-          <p class="card-text">Gentle, affectionate, and purrs instantly when held. Gets along well with other pets.</p>
+          <p class="card-text">Old soul, loves food, bonds  well with senior kitties and senior humans alike.</p>
           <ul class="specs-list">
             <li><span>Litter Trained:</span> <span>Yes</span></li>
-            <li><span>Current Diet:</span> <span>[e.g., Royal Canin Kitten / Boiled Chicken]</span></li>
+            <li><span>Current Diet:</span> <span>Royal Canin Kitten Dry Food, Sheba Wet Food, Boiled boneless fish</span></li>
           </ul>
         </div>
       </article>
@@ -187,10 +214,10 @@
             <span class="tag med">Dewormed</span>
             <span class="tag">Energetic</span>
           </div>
-          <p class="card-text">Bold and vocal leader of the group. Loves interactive games and high climbing perches.</p>
+          <p class="card-text">Adorable, agile and quick, first to the highest spot.</p>
           <ul class="specs-list">
             <li><span>Litter Trained:</span> <span>Yes</span></li>
-            <li><span>Current Diet:</span> <span>[e.g., Royal Canin Kitten / Boiled Chicken]</span></li>
+            <li><span>Current Diet:</span> <span>Royal Canin Kitten Dry Food, Sheba Wet Food, Boiled boneless fish</span></li>
           </ul>
         </div>
       </article>
@@ -226,18 +253,28 @@
             <td><span class="badge-done">Completed</span></td>
           </tr>
           <tr>
+            <td>Deworming #4 </td>
+            <td>Early September 2026</td>
+            <td><span class="badge-upcoming">Upcoming</span></td>
+          </tr>
+          <tr>
+            <td>Deworming #5 </td>
+            <td>Early October 2026</td>
+            <td><span class="badge-upcoming">Upcoming</span></td>
+          </tr>
+          <tr>
             <td>Tricat / FPV Vaccination (Dose 1)</td>
             <td>2026-08-06</td>
             <td><span class="badge-done">Completed</span></td>
           </tr>
           <tr>
             <td>Tricat Booster (Dose 2)</td>
-            <td>[3 Weeks Post Dose 1]</td>
+            <td>~3 Weeks Post Dose 1</td>
             <td><span class="badge-upcoming">Upcoming</span></td>
           </tr>
                     <tr>
             <td>Tricat Booster (Dose 3)</td>
-            <td>[6 Weeks Post Dose 1]</td>
+            <td>~6 Weeks Post Dose 1</td>
             <td><span class="badge-upcoming">Upcoming</span></td>
           </tr>
           <tr>
@@ -257,40 +294,44 @@
       <div class="gallery-scroll-container">
         <div class="gallery-item">
           <img src="images/miso_a.jpg" alt="Title coming" loading="lazy">
-          <span class="gallery-caption">Miso exploring</span>
+          <span class="gallery-caption">Miso "soup"</span>
         </div>
         <div class="gallery-item">
           <img src="images/miso_b.jpg" alt="Title coming" loading="lazy">
-          <span class="gallery-caption">Peppa relaxing</span>
+          <span class="gallery-caption">Miso under a blankie</span>
         </div>
         <div class="gallery-item">
-          <img src="images/miso_c.jpg" alt="Title coming" loading="lazy">
-          <span class="gallery-caption">Bubba active &amp; ready to play</span>
+          <img src="images/miso_d.jpg" alt="Title coming" loading="lazy">
+          <span class="gallery-caption">Miso snuggled</span>
         </div>
-                <div class="gallery-item">
+        <div class="gallery-item">
           <img src="images/bubba_a.jpg" alt="Title coming" loading="lazy">
-          <span class="gallery-caption">Bubba active &amp; ready to play</span>
+          <span class="gallery-caption">Peppa pose</span>
+        </div>
+        <div class="gallery-item">
+          <img src="images/peppa_b.jpg" alt="Title coming" loading="lazy">
+          <span class="gallery-caption">Plump Peppa</span>
         </div>
         <div class="gallery-item">
           <img src="images/bubba_b.jpg" alt="Title coming" loading="lazy">
-          <span class="gallery-caption">Bubba active &amp; ready to play</span>
+          <span class="gallery-caption">Dr. Bubba reading papers</span>
         </div>
         <div class="gallery-item">
           <img src="images/bubba_c.jpg" alt="Title coming" loading="lazy">
-          <span class="gallery-caption">Bubba active &amp; ready to play</span>
+          <span class="gallery-caption">Bubba getting all the love</span>
         </div>
         <div class="gallery-item">
           <img src="images/allkittens_a.jpg" alt="Title coming" loading="lazy">
-          <span class="gallery-caption">Bubba active &amp; ready to play</span>
+          <span class="gallery-caption">Peppa, Miso, Bubba, from the top left, clockwise</span>
         </div>
         <div class="gallery-item">
           <img src="images/allkittens_b.jpg" alt="Title coming" loading="lazy">
-          <span class="gallery-caption">Bubba active &amp; ready to play</span>
+          <span class="gallery-caption">Miso, Peppa, Bubba, left to right</span>
         </div>
-        <div class="gallery-item">
+        <!-- <div class="gallery-item">
           <img src="images/allkittens_c.jpg" alt="Title coming" loading="lazy">
           <span class="gallery-caption">Bubba active &amp; ready to play</span>
-        </div>
+        </div> -->
       </div>
     </section>
 
