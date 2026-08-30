@@ -14,7 +14,6 @@
   <meta property="og:type" content="website">
 
   <style>
-
     :root {
       --primary: #2b6cb0;
       --primary-hover: #2c5282;
@@ -32,16 +31,16 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        background-color: #fff0f5;
-        /* Clean Kawaii Bows, Paws & Hearts Pattern */
-        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f43f5e' fill-opacity='0.28'%3E%3C!-- Iconic Hello Kitty Bow (Top Left) --%3E%3Cpath d='M25,22 C18,14 12,20 14,27 C16,33 22,30 25,27 C28,30 34,33 36,27 C38,20 32,14 25,22 Z'/%3E%3Ccircle cx='25' cy='25' r='3.2' fill='%23e11d48' fill-opacity='0.45'/%3E%3C!-- Bear / Kitty Paw Pad (Bottom Right) --%3E%3Cellipse cx='75' cy='75' rx='7' ry='5.5'/%3E%3Ccircle cx='67' cy='67' r='2.2'/%3E%3Ccircle cx='72' cy='64' r='2.4'/%3E%3Ccircle cx='78' cy='64' r='2.4'/%3E%3Ccircle cx='83' cy='67' r='2.2'/%3E%3C!-- Kawaii Heart 1 (Top Right) --%3E%3Cpath d='M75,22 A3.5,3.5 0 0,0 70,25 A3.5,3.5 0 0,0 65,22 A3.5,3.5 0 0,0 65,27 L70,33 L75,27 A3.5,3.5 0 0,0 75,22 Z'/%3E%3C!-- Kawaii Heart 2 (Bottom Left) --%3E%3Cpath d='M25,72 A3.5,3.5 0 0,0 20,75 A3.5,3.5 0 0,0 15,72 A3.5,3.5 0 0,0 15,77 L20,83 L25,77 A3.5,3.5 0 0,0 25,72 Z'/%3E%3C/g%3E%3C/svg%3E");
-        background-repeat: repeat;
-        background-attachment: fixed;
-        color: var(--text);
-        line-height: 1.6;
-        padding: 24px 16px;
-      }
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fff0f5;
+      /* Clean Kawaii Bows, Paws & Hearts Pattern */
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f43f5e' fill-opacity='0.28'%3E%3C!-- Iconic Hello Kitty Bow (Top Left) --%3E%3Cpath d='M25,22 C18,14 12,20 14,27 C16,33 22,30 25,27 C28,30 34,33 36,27 C38,20 32,14 25,22 Z'/%3E%3Ccircle cx='25' cy='25' r='3.2' fill='%23e11d48' fill-opacity='0.45'/%3E%3C!-- Bear / Kitty Paw Pad (Bottom Right) --%3E%3Cellipse cx='75' cy='75' rx='7' ry='5.5'/%3E%3Ccircle cx='67' cy='67' r='2.2'/%3E%3Ccircle cx='72' cy='64' r='2.4'/%3E%3Ccircle cx='78' cy='64' r='2.4'/%3E%3Ccircle cx='83' cy='67' r='2.2'/%3E%3C!-- Kawaii Heart 1 (Top Right) --%3E%3Cpath d='M75,22 A3.5,3.5 0 0,0 70,25 A3.5,3.5 0 0,0 65,22 A3.5,3.5 0 0,0 65,27 L70,33 L75,27 A3.5,3.5 0 0,0 75,22 Z'/%3E%3C!-- Kawaii Heart 2 (Bottom Left) --%3E%3Cpath d='M25,72 A3.5,3.5 0 0,0 20,75 A3.5,3.5 0 0,0 15,72 A3.5,3.5 0 0,0 15,77 L20,83 L25,77 A3.5,3.5 0 0,0 25,72 Z'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
     
     .container { max-width: 960px; margin: 0 auto; }
 
@@ -80,7 +79,7 @@
     .updated-dot {
       width: 6px;
       height: 6px;
-      background-color: #10b981; /* Green pulse dot */
+      background-color: #10b981;
       border-radius: 50%;
       display: inline-block;
     }
@@ -111,17 +110,17 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 12px; /* Adds clean spacing between label and value */
+      gap: 12px;
     }
 
     .specs-list li span:first-child {
       color: var(--text-muted);
-      flex-shrink: 0; /* Prevents "Current Diet:" from shrinking or wrapping awkwardly */
+      flex-shrink: 0;
       white-space: nowrap;
     }
 
     .specs-list li span:last-child {
-      text-align: right; /* Keeps multi-line text neatly aligned to the right */
+      text-align: right;
     }
 
     /* Section General */
@@ -137,7 +136,7 @@
 
     /* Photo Gallery */
     .gallery-scroll-container {
-      max-height: 600px; /* Increased from 440px/480px */
+      max-height: 600px;
       overflow-y: auto;
       border-radius: 8px;
       border: 1px solid var(--border);
@@ -146,7 +145,7 @@
       flex-direction: column;
       gap: 24px;
       scroll-snap-type: y mandatory;
-      }    
+    }    
     .gallery-scroll-container::-webkit-scrollbar { width: 8px; }
     .gallery-scroll-container::-webkit-scrollbar-track { background: var(--bg); }
     .gallery-scroll-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
@@ -156,7 +155,7 @@
       max-width: 100%;
       max-height: 540px;
       height: auto;
-      object-fit: contain; /* Shows full photo without cropping */
+      object-fit: contain;
       border-radius: 8px;
       display: block;
     }    
@@ -171,6 +170,82 @@
     .cta-section { text-align: center; padding: 32px 20px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; }
     .btn { display: inline-block; background-color: var(--primary); color: #fff; text-decoration: none; padding: 12px 28px; font-size: 1rem; font-weight: 600; border-radius: 8px; transition: background 0.2s; }
     .btn:hover { background-color: var(--primary-hover); }
+
+    /* Mama Story Banner */
+    .story-banner {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: 36px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .story-banner {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    .story-content {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .story-subtitle {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #b45309;
+      margin-bottom: 6px;
+    }
+
+    .story-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .story-body {
+      font-size: 0.95rem;
+      color: #4a5568;
+      line-height: 1.65;
+    }
+
+    .story-body p {
+      margin-bottom: 12px;
+    }
+
+    .story-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-highlight {
+      color: #1a202c;
+      font-weight: 600;
+    }
+
+    .story-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      background: #f1f5f9;
+      min-height: 240px;
+    }
+
+    .story-photos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -265,7 +340,6 @@
           </ul>
         </div>
       </article>
-
 
     </main>
 
@@ -431,14 +505,14 @@
         </div>
       </div>
       <div style="background: var(--bg); border: 1px dashed #cbd5e1; border-radius: 8px; padding: 12px 16px; margin-top: 20px; font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; gap: 10px;">
-      <span style="font-size: 1.2rem;">💡</span>
-      <span>
-        <strong style="color: #1a202c;">Need assistance?</strong> If any of these steps feel daunting, such as setting up window or balcony cat-proofing, just talk to us! We are glad to share vendor recommendations, tips, and support.
-      </span>
-    </div>
+        <span style="font-size: 1.2rem;">💡</span>
+        <span>
+          <strong style="color: #1a202c;">Need assistance?</strong> If any of these steps feel daunting, such as setting up window or balcony cat-proofing, just talk to us! We are glad to share vendor recommendations, tips, and support.
+        </span>
+      </div>
     </section>
 
-<!-- Call to Action Section -->
+    <!-- Call to Action Section -->
     <section class="cta-section">
       <h2>Interested in Adopting?</h2>
       <p style="color: var(--text-muted); margin-bottom: 20px;">Applications are reviewed on a rolling basis. Please complete the form below to begin the screening process.</p>
@@ -461,6 +535,29 @@
         </a> -->
       </div>
     </section>
+
+    <!-- Mama's Story Banner -->
+    <section class="story-banner">
+      <div class="story-content">
+        <span class="story-subtitle">🐈 A Word About Their Mama</span>
+        <h2 class="story-title">Snowie’s Story &amp; Origins</h2>
+        
+        <div class="story-body">
+          <p>
+            Already <span class="story-highlight">pregnant with this litter</span> while still nursing her first, Snowie tragically lost those older kittens before arriving at our doorstep seeking safety and shelter.
+          </p>
+          <p>
+            A true <span class="story-highlight">resilient fighter</span>, she gave birth in safety and nurtured these boys into the loving, confident, and healthy kittens they are today. ❤️
+          </p>
+        </div>
+      </div>
+
+      <div class="story-photos">
+        <img src="images/snowie_standing.jpg" alt="Snowie standing" loading="lazy">
+        <img src="images/snowie_resting.jpg" alt="Snowie resting" loading="lazy">
+      </div>
+    </section>
+
   </div>
 
 </body>
