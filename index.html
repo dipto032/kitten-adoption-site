@@ -45,6 +45,37 @@
       line-height: 1.6;
       padding: 24px 16px;
     }
+
+    /* Card image wrapper for floating status badges */
+    .card-image-wrap {
+      position: relative;
+    }
+
+    .status-ribbon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #f59e0b;
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 5px 11px;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Optional: warm amber style for tag pill */
+    .tag.status-hold {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      font-weight: 700;
+    }
     
     .container { max-width: 960px; margin: 0 auto; }
 
@@ -349,7 +380,7 @@
     <header>
       <div class="updated-badge">
         <span class="updated-dot"></span>
-        Last updated: August 28, 2026
+        Last updated: September 3, 2026
       </div>
       <h1>Kittens Looking for a Home</h1>
       <p>Meet our healthy, playful rescue kittens ready for loving, responsible forever homes.</p>
@@ -372,13 +403,16 @@
       
       <!-- Bubba -->
       <article class="card">
-        <img src="images/bubba_b.jpg" alt="Bubba">
+        <div class="card-image-wrap">
+          <img src="images/bubba_b.jpg" alt="Bubba">
+          <span class="status-ribbon">🐾 Lined up for adoption!</span>
+        </div>
         <div class="card-body">
           <div class="card-header">
             <h2 class="card-title">Bubba</h2>
-            <!-- <span class="card-meta">Born: June 19, 2026</span> -->
           </div>
           <div class="tags">
+            <span class="tag status-hold">Pending Adoption Post-Vaccine</span>
             <span class="tag">Male</span>
             <span class="tag med">Tricat Dose 2 Vaccinated</span>
             <span class="tag med">Dewormed</span>
@@ -386,6 +420,7 @@
           </div>
           <p class="card-text">Adorable, agile and quick, loves singing.</p>
           <ul class="specs-list">
+            <li><span>Status:</span> <span style="font-weight: 600; color: #b45309;">Handover pending Dose 3 (Backup applications welcome)</span></li>
             <li><span>Litter Trained:</span> <span>Yes</span></li>
             <li><span>Current Diet:</span> <span>Boneless, spice-free boiled fish and/or chicken (3x/day), dry kitten food (1x/day)</span></li>
           </ul>
