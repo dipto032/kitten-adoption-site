@@ -36,7 +36,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: #fff0f5;
       /* Clean Kawaii Bows, Paws & Hearts Pattern */
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f43f5e' fill-opacity='0.28'%3E%3C!-- Iconic Hello Kitty Bow (Top Left) --%3E%3Cpath d='M25,22 C18,14 12,20 14,27 C16,33 22,30 25,27 C28,30 34,33 36,27 C38,20 32,14 25,22 Z'/%3E%3Ccircle cx='25' cy='25' r='3.2' fill='%23e11d48' fill-opacity='0.45'/%3E%3C!-- Bear / Kitty Paw Pad (Bottom Right) --%3E%3Cellipse cx='75' cy='75' rx='7' ry='5.5'/%3E%3Ccircle cx='67' cy='67' r='2.2'/%3E%3Ccircle cx='72' cy='64' r='2.4'/%3E%3Ccircle cx='78' cy='64' r='2.4'/%3E%3Ccircle cx='83' cy='67' r='2.2'/%3E%3C!-- Kawaii Heart 1 (Top Right) --%3E%3Cpath d='M75,22 A3.5,3.5 0 0,0 70,25 A3.5,3.5 0 0,0 65,22 A3.5,3.5 0 0,0 65,27 L70,33 L75,27 A3.5,3.5 0 0,0 75,22 Z'/%3E%3C!-- Kawaii Heart 2 (Bottom Left) --%3E%3Cpath d='M25,72 A3.5,3.5 0 0,0 20,75 A3.5,3.5 0 0,0 15,72 A3.5,3.5 0 0,0 15,77 L20,83 L25,77 A3.5,3.5 0 0,0 25,72 Z'/%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f43f5e' fill-opacity='0.28'%3E%3Cpath d='M25,22 C18,14 12,20 14,27 C16,33 22,30 25,27 C28,30 34,33 36,27 C38,20 32,14 25,22 Z'/%3E%3Ccircle cx='25' cy='25' r='3.2' fill='%23e11d48' fill-opacity='0.45'/%3E%3Cellipse cx='75' cy='75' rx='7' ry='5.5'/%3E%3Ccircle cx='67' cy='67' r='2.2'/%3E%3Ccircle cx='72' cy='64' r='2.4'/%3E%3Ccircle cx='78' cy='64' r='2.4'/%3E%3Ccircle cx='83' cy='67' r='2.2'/%3E%3Cpath d='M75,22 A3.5,3.5 0 0,0 70,25 A3.5,3.5 0 0,0 65,22 A3.5,3.5 0 0,0 65,27 L70,33 L75,27 A3.5,3.5 0 0,0 75,22 Z'/%3E%3Cpath d='M25,72 A3.5,3.5 0 0,0 20,75 A3.5,3.5 0 0,0 15,72 A3.5,3.5 0 0,0 15,77 L20,83 L25,77 A3.5,3.5 0 0,0 25,72 Z'/%3E%3C/g%3E%3C/svg%3E");
       background-repeat: repeat;
       background-attachment: fixed;
       color: var(--text);
@@ -44,38 +44,9 @@
       padding: 24px 16px;
     }
 
-    /* Card image wrapper for floating status badges */
-    .card-image-wrap {
-      position: relative;
-    }
-
-    .status-ribbon {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: #059669;
-      color: #ffffff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      padding: 5px 12px;
-      border-radius: 999px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      z-index: 2;
-    }
-
-    .card.adopted {
-      opacity: 0.88;
-      background: #fafafa;
-    }
-
     .container { max-width: 960px; margin: 0 auto; }
 
-    /* Header & Instagram Sublink */
+    /* Header */
     header {
       text-align: center;
       margin-bottom: 36px;
@@ -115,7 +86,7 @@
       display: inline-block;
     }
 
-    /* Kitten Cards Grid Layout */
+    /* Kitten Cards */
     .kitten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px; }
     .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; position: relative; }
     .card img { width: 100%; height: 240px; aspect-ratio: 4 / 3; object-fit: cover; background-color: #cbd5e0; display: block; }
@@ -129,14 +100,51 @@
     .tag.adopted-tag { background: #dcfce7; color: #15803d; }
     .card-text { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 16px; flex: 1; }
 
-    /* Key Specs inside Cards */
+    .card-image-wrap { position: relative; }
+    .status-ribbon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #059669;
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      z-index: 2;
+    }
+
+    /* Muted Grayscale for Adopted Kittens */
+    .card.adopted {
+      opacity: 0.65;
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      filter: grayscale(85%);
+      transition: filter 0.2s ease, opacity 0.2s ease;
+    }
+    .card.adopted .status-ribbon {
+      filter: none;
+      background: #059669;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+    .card.adopted .card-title { color: #64748b; }
+    .card.adopted .card-text,
+    .card.adopted .specs-list li span { color: #94a3b8; }
+    .card.adopted .tag { background: #e2e8f0; color: #64748b; }
+
     .specs-list {
       list-style: none;
       font-size: 0.88rem;
       border-top: 1px solid var(--border);
       padding-top: 12px;
     }
-
     .specs-list li {
       margin-bottom: 8px;
       display: flex;
@@ -144,22 +152,18 @@
       align-items: flex-start;
       gap: 12px;
     }
-
     .specs-list li span:first-child {
       color: var(--text-muted);
       flex-shrink: 0;
       white-space: nowrap;
     }
+    .specs-list li span:last-child { text-align: right; }
 
-    .specs-list li span:last-child {
-      text-align: right;
-    }
-
-    /* Section General */
+    /* General Section Boxes */
     .section-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 32px; }
     .section-box h2 { font-size: 1.35rem; margin-bottom: 8px; color: #1a202c; }
 
-    /* Medical History & Key Facts Table */
+    /* Medical Table */
     .med-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.92rem; }
     .med-table th, .med-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
     .med-table th { background: var(--bg); font-weight: 600; color: #4a5568; }
@@ -193,12 +197,80 @@
     }    
     .gallery-caption { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); margin-top: 6px; }
 
-    /* Process & Requirements Grid */
+    /* Adoption Flowchart Timeline */
+    .flowchart-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .flow-step {
+      display: flex;
+      gap: 18px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+    .flow-step:hover { border-color: #cbd5e1; }
+    .flow-number-badge {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #eff6ff;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+    .flow-content { flex: 1; }
+    .flow-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .flow-title { font-size: 1.05rem; font-weight: 700; color: #1a202c; }
+    .flow-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #475569;
+    }
+    .flow-pill.key { background: #fef3c7; color: #92400e; }
+    .flow-pill.final { background: #dcfce7; color: #15803d; }
+    .flow-desc { font-size: 0.92rem; color: #4a5568; line-height: 1.5; }
+    .flow-note { font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; display: block; }
+    .flow-disclaimer {
+      background: #fff7ed;
+      border: 1px solid #ffedd5;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 20px;
+      font-size: 0.88rem;
+      color: #9a3412;
+      line-height: 1.5;
+    }
+
+    /* Process & Criteria */
     .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 16px; }
     .step { background: var(--bg); padding: 14px; border-radius: 8px; border-left: 4px solid var(--primary); font-size: 0.9rem; }
     .step-num { font-weight: 700; color: var(--primary); margin-bottom: 2px; }
 
-    /* Adoption Standards & QR Resource Card */
+    /* Resource Guide Card */
     .resource-card {
       background: #fafafa;
       border: 1px solid var(--border);
@@ -210,14 +282,6 @@
       align-items: center;
       gap: 20px;
     }
-
-    @media (min-width: 640px) {
-      .resource-card {
-        flex-direction: row;
-        align-items: center;
-      }
-    }
-
     .resource-qr-link {
       display: block;
       flex-shrink: 0;
@@ -228,21 +292,9 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
       transition: transform 0.2s ease;
     }
-
-    .resource-qr-link:hover {
-      transform: scale(1.03);
-    }
-
-    .resource-qr-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .resource-info {
-      flex: 1;
-    }
-
+    .resource-qr-link:hover { transform: scale(1.03); }
+    .resource-qr-img { width: 100%; height: auto; display: block; }
+    .resource-info { flex: 1; }
     .resource-badge {
       display: inline-block;
       font-size: 0.75rem;
@@ -256,21 +308,8 @@
       border-radius: 999px;
       margin-bottom: 6px;
     }
-
-    .resource-info h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #1a202c;
-      margin-bottom: 6px;
-    }
-
-    .resource-info p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 12px;
-    }
-
+    .resource-info h3 { font-size: 1.1rem; font-weight: 700; color: #1a202c; margin-bottom: 6px; }
+    .resource-info p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
     .resource-btn {
       display: inline-flex;
       align-items: center;
@@ -284,10 +323,7 @@
       border-radius: 6px;
       transition: opacity 0.2s ease;
     }
-
-    .resource-btn:hover {
-      opacity: 0.9;
-    }
+    .resource-btn:hover { opacity: 0.9; }
 
     /* CTA Section */
     .cta-section { text-align: center; padding: 32px 20px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; }
@@ -305,171 +341,28 @@
       display: grid;
       grid-template-columns: 1fr;
     }
+    .story-content { padding: 32px 28px; display: flex; flex-direction: column; justify-content: center; }
+    .story-subtitle { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #b45309; margin-bottom: 6px; }
+    .story-title { font-size: 1.6rem; font-weight: 700; color: #1a202c; margin-bottom: 14px; line-height: 1.25; }
+    .story-body { font-size: 0.95rem; color: #4a5568; line-height: 1.65; }
+    .story-body p { margin-bottom: 12px; }
+    .story-body p:last-child { margin-bottom: 0; }
+    .story-highlight { color: #1a202c; font-weight: 600; }
+    .story-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: #f1f5f9; min-height: 240px; }
+    .story-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Responsive Queries */
+    @media (min-width: 640px) {
+      .resource-card { flex-direction: row; align-items: center; }
+    }
 
     @media (min-width: 768px) {
-      .story-banner {
-        grid-template-columns: 1.1fr 0.9fr;
-      }
+      .story-banner { grid-template-columns: 1.1fr 0.9fr; }
     }
 
-    .story-content {
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .story-subtitle {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #b45309;
-      margin-bottom: 6px;
-    }
-
-    .story-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #1a202c;
-      margin-bottom: 14px;
-      line-height: 1.25;
-    }
-
-    .story-body {
-      font-size: 0.95rem;
-      color: #4a5568;
-      line-height: 1.65;
-    }
-
-    .story-body p {
-      margin-bottom: 12px;
-    }
-
-    .story-body p:last-child {
-      margin-bottom: 0;
-    }
-
-    .story-highlight {
-      color: #1a202c;
-      font-weight: 600;
-    }
-
-    .story-photos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4px;
-      background: #f1f5f9;
-      min-height: 240px;
-    }
-
-    .story-photos img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    /* Adoption Flowchart Timeline */
-    .flowchart-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-top: 20px;
-      position: relative;
-    }
-
-    .flow-step {
-      display: flex;
-      gap: 18px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px 20px;
-      position: relative;
-      transition: border-color 0.2s ease;
-    }
-
-    .flow-step:hover {
-      border-color: #cbd5e1;
-    }
-
-    .flow-number-badge {
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #eff6ff;
-      color: var(--primary);
-      border: 2px solid var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.1rem;
-    }
-
-    .flow-content {
-      flex: 1;
-    }
-
-    .flow-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
-
-    .flow-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #1a202c;
-    }
-
-    .flow-pill {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: #e2e8f0;
-      color: #475569;
-    }
-
-    .flow-pill.key {
-      background: #fef3c7;
-      color: #92400e;
-    }
-
-    .flow-pill.final {
-      background: #dcfce7;
-      color: #15803d;
-    }
-
-    .flow-desc {
-      font-size: 0.92rem;
-      color: #4a5568;
-      line-height: 1.5;
-    }
-
-    .flow-note {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 6px;
-      display: block;
-    }
-
-    .flow-disclaimer {
-      background: #fff7ed;
-      border: 1px solid #ffedd5;
-      border-radius: 8px;
-      padding: 14px 18px;
-      margin-top: 20px;
-      font-size: 0.88rem;
-      color: #9a3412;
-      line-height: 1.5;
+    @media (max-width: 480px) {
+      .flow-step { gap: 12px; padding: 14px; }
+      .flow-number-badge { width: 36px; height: 36px; font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -500,7 +393,7 @@
           </div>
           <div class="tags">
             <span class="tag">Male</span>
-            <span class="tag med">Tricat Dose 2 Vaccinated</span>
+            <span class="tag med">Tricat (3 doses) & Rabies (1 dose) Vaccinated</span>
             <span class="tag med">Dewormed</span>
             <span class="tag">Yapper</span>
           </div>
@@ -523,7 +416,7 @@
           </div>
           <div class="tags">
             <span class="tag">Male</span>
-            <span class="tag med">Tricat Dose 2 Vaccinated</span>
+            <span class="tag med">Tricat (3 doses) & Rabies (1 dose) Vaccinated</span>
             <span class="tag med">Dewormed</span>
             <span class="tag">Energetic</span>
           </div>
@@ -548,7 +441,7 @@
           <div class="tags">
             <span class="tag adopted-tag">Adopted</span>
             <span class="tag">Male</span>
-            <span class="tag med">Tricat Dose 2 Vaccinated</span>
+            <span class="tag med">Tricat (3 doses) & Rabies (1 dose) Vaccinated</span>
             <span class="tag med">Dewormed</span>
           </div>
           <p class="card-text">Lap and shoulder kitty, perfect co-working pawtner, playful yet demure.</p>
