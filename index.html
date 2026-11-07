@@ -369,6 +369,108 @@
       object-fit: cover;
       display: block;
     }
+    /* Adoption Flowchart Timeline */
+    .flowchart-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .flow-step {
+      display: flex;
+      gap: 18px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+
+    .flow-step:hover {
+      border-color: #cbd5e1;
+    }
+
+    .flow-number-badge {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #eff6ff;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .flow-content {
+      flex: 1;
+    }
+
+    .flow-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .flow-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a202c;
+    }
+
+    .flow-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #475569;
+    }
+
+    .flow-pill.key {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .flow-pill.final {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .flow-desc {
+      font-size: 0.92rem;
+      color: #4a5568;
+      line-height: 1.5;
+    }
+
+    .flow-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      display: block;
+    }
+
+    .flow-disclaimer {
+      background: #fff7ed;
+      border: 1px solid #ffedd5;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 20px;
+      font-size: 0.88rem;
+      color: #9a3412;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -377,7 +479,7 @@
     <header>
       <div class="updated-badge">
         <span class="updated-dot"></span>
-        Last updated: September 14, 2026
+        Last updated: Nov 7, 2026
       </div>
       <h1>Kittens Looking for a Home</h1>
       <p>Meet our healthy, playful rescue kittens ready for loving, responsible forever homes.</p>
@@ -497,7 +599,7 @@
           <tr>
             <td>Deworming #5 </td>
             <td>2026-09-16</td>
-            <td><span class="badge-upcoming">Completed</span></td>
+            <td><span class="badge-done">Completed</span></td>
           </tr>
           <tr>
             <td>Tricat Vaccination (Dose 1)</td>
@@ -516,8 +618,8 @@
           </tr>
           <tr>
             <td>Rabies/ARV</td>
-            <td>At ~3 weeks after Tricat Booster #3</td>
-            <td><span class="badge-upcoming">Completed</span></td>
+            <td>2026-10-10</td>
+            <td><span class="badge-done">Completed</span></td>
           </tr>
           <tr>
             <td>Mandatory Spay/Neuter</td>
@@ -578,6 +680,92 @@
     </section>
 
     <!-- Adoption Process & Prerequisites -->
+     <!-- Adoption Process Flowchart -->
+    <section class="section-box">
+      <h2>Adoption Process &amp; Stages</h2>
+      <p style="font-size: 0.95rem; color: var(--text-muted);">
+        To safeguard the health and lifelong security of our kittens, every prospective home goes through a structured 5-stage adoption pathway:
+      </p>
+
+      <div class="flowchart-timeline">
+        <!-- Stage 1 -->
+        <div class="flow-step">
+          <div class="flow-number-badge">1</div>
+          <div class="flow-content">
+            <div class="flow-header">
+              <span class="flow-title">Review Terms &amp; Guidelines</span>
+              <span class="flow-pill">Mandatory First Step</span>
+            </div>
+            <p class="flow-desc">
+              Carefully review our non-negotiables: 100% indoor living, mandatory window/balcony cat-proofing, raw/cooked wholesome diet, and spay/neuter commitments.
+            </p>
+            <span class="flow-note">💬 Have questions or doubts first? Reach out directly over WhatsApp before applying!</span>
+          </div>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="flow-step">
+          <div class="flow-number-badge">2</div>
+          <div class="flow-content">
+            <div class="flow-header">
+              <span class="flow-title">Submit Adoption Questionnaire</span>
+              <span class="flow-pill">Application</span>
+            </div>
+            <p class="flow-desc">
+              Fill out our formal Google Adoption Application with details on your living setup, past pet experience, and household agreement.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="flow-step">
+          <div class="flow-number-badge">3</div>
+          <div class="flow-content">
+            <div class="flow-header">
+              <span class="flow-title">Initial Screening &amp; Compatibility Chat</span>
+              <span class="flow-pill">Alignment</span>
+            </div>
+            <p class="flow-desc">
+              A mutual review of your answers followed by an informal phone/WhatsApp voice chat to discuss kitten temperament, lifestyle expectations, and ensure strong mutual alignment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="flow-step">
+          <div class="flow-number-badge">4</div>
+          <div class="flow-content">
+            <div class="flow-header">
+              <span class="flow-title">Virtual Home Safety Verification</span>
+              <span class="flow-pill key">Critical Verification</span>
+            </div>
+            <p class="flow-desc">
+              A scheduled live video walk-through of your residence to verify that accessible balconies, windows, and open grilles are securely cat-proofed with durable netting/mesh.
+            </p>
+            <span class="flow-note">⚠️ Note: If safety gaps are identified, handovers remain paused until mesh is reinforced and re-verified.</span>
+          </div>
+        </div>
+
+        <!-- Stage 5 -->
+        <div class="flow-step">
+          <div class="flow-number-badge">5</div>
+          <div class="flow-content">
+            <div class="flow-header">
+              <span class="flow-title">Documentation &amp; Handover</span>
+              <span class="flow-pill final">Home Transition</span>
+            </div>
+            <p class="flow-desc">
+              Submission of valid Government Photo ID + Address Proof and signing the Adoption &amp; Sterilization Undertaking.
+            </p>
+            <span class="flow-note">🐾 Adopter must bring a secure, hard-sided travel carrier for the kitten's safe journey home.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-disclaimer">
+        <strong>📌 Note on Selection:</strong> Adoptions are never processed on a first-come, first-served basis. We reserve the right to pause or decline applications at any phase if the environment or terms do not meet the kitten’s long-term health and safety requirements.
+      </div>
+    </section>
     <section class="section-box">
       <h2>Adoption Information &amp; Criteria</h2>
       <p style="font-size: 0.95rem; color: var(--text-muted);">
@@ -588,7 +776,7 @@
         <div class="step">
           <div class="step-num">Adoption Timeline</div>
           <strong>Post-Vaccination Transition</strong>
-          <p>Kittens available after three doses of Tricat. Early handover can be discussed for experienced adopters.</p>
+          <p>Primary vaccines for the Kittens are complete (3 doses Tricat, 1 dose Rabies). Kittens are ready for transition.</p>
         </div>
 
         <div class="step">
