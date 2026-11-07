@@ -120,24 +120,31 @@
       z-index: 2;
     }
 
-    /* Muted Grayscale for Adopted Kittens */
+/* Clean adopted card styling: cheerful translucent mask, no grayscale */
     .card.adopted {
-      opacity: 0.65;
-      background: #f1f5f9;
-      border-color: #cbd5e1;
-      filter: grayscale(85%);
-      transition: filter 0.2s ease, opacity 0.2s ease;
+      background: #ffffff;
+      border-color: #e2e8f0;
     }
+
+    /* Soft veil on the photo and text so the card recedes gently */
+    .card.adopted img {
+      opacity: 0.50;
+    }
+
+    .card.adopted .card-body {
+      opacity: 0.65;
+    }
+
+    /* Full-brightness, vibrant green ribbon sitting above the mask */
     .card.adopted .status-ribbon {
-      filter: none;
       background: #059669;
       color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
+      z-index: 10;
     }
-    .card.adopted .card-title { color: #64748b; }
-    .card.adopted .card-text,
-    .card.adopted .specs-list li span { color: #94a3b8; }
-    .card.adopted .tag { background: #e2e8f0; color: #64748b; }
 
     .specs-list {
       list-style: none;
@@ -380,12 +387,13 @@
     
 
     <!-- Kitten Cards -->
+    <!-- Kitten Cards -->
     <main class="kitten-grid">
       
-      <!-- Bubba (Available Again) -->
+      <!-- Bubba -->
       <article class="card">
         <div class="card-image-wrap">
-          <img src="images/bubba_b.jpg" alt="Bubba">
+          <img src="images/bubba_b.jpg" alt="Bubba the rescue kitten">
         </div>
         <div class="card-body">
           <div class="card-header">
@@ -393,22 +401,22 @@
           </div>
           <div class="tags">
             <span class="tag">Male</span>
-            <span class="tag med">Tricat (3 doses) & Rabies (1 dose) Vaccinated</span>
-            <span class="tag med">Dewormed</span>
             <span class="tag">Yapper</span>
+            <span class="tag med">Dewormed</span>
+            <span class="tag med">Tricat (3 doses) &amp; Rabies (1 dose) Vaccinated</span>
           </div>
           <p class="card-text">Adorable, agile and quick, loves singing.</p>
           <ul class="specs-list">
             <li><span>Litter Trained:</span> <span>Yes</span></li>
-            <li><span>Current Diet:</span> <span>Boneless, spice-free boiled fish and/or chicken (3x/day), dry kitten food (1x/day)</span></li>
+            <li><span>Current Diet:</span> <span>Boneless, spice-free boiled fish/chicken (3x/day), dry kitten food (1x/day)</span></li>
           </ul>
         </div>
       </article>
 
-      <!-- Peppa (Available) -->
+      <!-- Peppa -->
       <article class="card">
         <div class="card-image-wrap">
-          <img src="images/peppa_e.jpeg" alt="Peppa">
+          <img src="images/peppa_e.jpeg" alt="Peppa the rescue kitten">
         </div>
         <div class="card-body">
           <div class="card-header">
@@ -416,14 +424,14 @@
           </div>
           <div class="tags">
             <span class="tag">Male</span>
-            <span class="tag med">Tricat (3 doses) & Rabies (1 dose) Vaccinated</span>
-            <span class="tag med">Dewormed</span>
             <span class="tag">Energetic</span>
+            <span class="tag med">Dewormed</span>
+            <span class="tag med">Tricat (3 doses) &amp; Rabies (1 dose) Vaccinated</span>
           </div>
           <p class="card-text">Old soul, loves food, bonds well with senior kitties and senior humans alike.</p>
           <ul class="specs-list">
             <li><span>Litter Trained:</span> <span>Yes</span></li>
-            <li><span>Current Diet:</span> <span>Boneless, spice-free boiled fish and/or chicken (3x/day), dry kitten food (1x/day)</span></li>
+            <li><span>Current Diet:</span> <span>Boneless, spice-free boiled fish/chicken (3x/day), dry kitten food (1x/day)</span></li>
           </ul>
         </div>
       </article>
@@ -431,7 +439,7 @@
       <!-- Miso (Adopted) -->
       <article class="card adopted">
         <div class="card-image-wrap">
-          <img src="images/miso_a.jpg" alt="Miso">
+          <img src="images/miso_a.jpg" alt="Miso the rescue kitten">
           <span class="status-ribbon">🐾 Adopted!</span>
         </div>
         <div class="card-body">
@@ -441,14 +449,15 @@
           <div class="tags">
             <span class="tag adopted-tag">Adopted</span>
             <span class="tag">Male</span>
-            <span class="tag med">Tricat (3 doses) & Rabies (1 dose) Vaccinated</span>
+            <span class="tag">Playful</span>
             <span class="tag med">Dewormed</span>
+            <span class="tag med">Tricat (3 doses) &amp; Rabies (1 dose) Vaccinated</span>
           </div>
           <p class="card-text">Lap and shoulder kitty, perfect co-working pawtner, playful yet demure.</p>
           <ul class="specs-list">
             <li><span>Status:</span> <span style="font-weight: 700; color: #059669;">Happily Adopted 🎉</span></li>
             <li><span>Litter Trained:</span> <span>Yes</span></li>
-            <li><span>Current Diet:</span> <span>Boneless, spice-free boiled fish and/or chicken (3x/day), dry kitten food (1x/day)</span></li>
+            <li><span>Current Diet:</span> <span>Boneless, spice-free boiled fish/chicken (3x/day), dry kitten food (1x/day)</span></li>
           </ul>
         </div>
       </article>
